@@ -1,0 +1,12 @@
+
+.signIn {
+    background-image: url('../../../assets/outdoors2.png');
+    background-size: cover;
+    background-position: bottom;
+    
+}
+.form {
+    border: 2px solid grey;
+    border-radius:1rem;
+    /* background-color: white; */
+}
