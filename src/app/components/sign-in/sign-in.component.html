@@ -1,0 +1,95 @@
+<div class="signIn pb-5">
+    <div class="container">
+        <h1 class="text-center pt-5 pb-3">Registro</h1>
+
+        <form class="form p-3 shadow " autocomplete="off" [formGroup]="FormSignIn" (ngSubmit)="registrar()">
+            <div class="form-group">
+                <label class="d-flex justify-content-center">Nombre</label>
+                <input 
+                    type="text" 
+                    class="form-control"
+                    placeholder="Introduce tu nombre"
+                    formControlName="name" 
+                    [class.is-invalid]="invalidName"
+                    [class.is-valid]="validName"
+                >
+                <small *ngIf="invalidName"  class="form-text text-danger">Debes introducir un nombre</small>
+            </div>
+            <div class="form-group">
+                <label class="d-flex justify-content-center text-light">Apellidos</label>
+                <input 
+                    type="text" 
+                    class="form-control"
+                    placeholder="Introduce tus apellidos"
+                    formControlName="familyName"
+                    [class.is-invalid]="invalidFamilyName"
+                    [class.is-valid]="validFamilyName"
+                
+                >
+            <small *ngIf="invalidFamilyName" class="form-text text-danger ">Debes introducir un apellido</small>
+            </div>
+            <div class="form-group">
+                <label class="d-flex justify-content-center text-light">Fecha de nacimiento</label>
+                <input
+                    type="date" 
+                    class="form-control"
+                    placeholder="Introduce tu fecha de nacimiento"
+                    formControlName="bornData"
+                    [class.is-invalid]="invalidData"
+                    [class.is-valid]="validData"
+                >
+            <small *ngIf="invalidData"  class="form-text text-danger">Debes introducir una fecha válida</small>
+            </div>
+            <div class="form-group">
+                <label class="d-flex justify-content-center text-light">Ciudad</label>
+                <input
+                    type="text" 
+                    class="form-control"
+                    placeholder="Introduce tu lugar de residencia"
+                    formControlName="city"
+                    [class.is-invalid]="invalidCity"
+                    [class.is-valid]="validCity"
+                >
+            <small *ngIf="invalidCity" class="form-text text-danger">Debes introducir un lugar de residencia</small>
+            </div>
+            <div class="form-group">
+                <label class="d-flex justify-content-center text-light">Email</label>
+                <input
+                    type="text" 
+                    class="form-control"
+                    placeholder="Introduce un email de contacto"
+                    formControlName="email"
+                    [class.is-invalid]="invalidEmail"
+                    [class.is-valid]="validEmail"
+                >
+            <small *ngIf="invalidEmail"  class="form-text text-danger">Debes introducir un correo válido</small>
+            </div>
+            <div class="form-group">
+                <label class="d-flex justify-content-center text-light">Teléfono</label>
+                <input
+                    type="number" 
+                    class="form-control"
+                    placeholder="Introduce tu teléfono"
+                    formControlName="phone"
+                    [class.is-invalid]="invalidPhone"
+                    [class.is-valid]="validPhone"
+                >
+            <small *ngIf="invalidPhone"  class="form-text text-danger">Debes introducir un teléfono</small>
+            </div>
+            <div class="form-group">
+                <p class="d-flex justify-content-center text-light">Tipo de usuario</p>
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <div class="form-check my-2 ">
+                        <input type="radio" formControlName="type" value="A" checked>
+                        <label class="form-check-label text-light pl-1">Deportista</label>
+                    </div>
+                    <div class="form-check my-2 ">
+                        <input type="radio" formControlName="type" value="B">
+                        <label class="form-check-label text-light pl-1">Organizador</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" [disabled]="!FormSignIn.valid" class="btn btn-primary btn-block mb-5">Resgistrarse</button>
+        </form>
+    </div>
+</div>
