@@ -1,0 +1,19 @@
+.home {
+    height: 30rem;
+    background-image: url('../../../assets/landing.png');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.landing {
+    padding-top:5rem;
+}
+.landing__title {
+    font-weight: bold;
+    font-size:5rem;
+}
+
+.landing__description {
+    max-width: 20rem;
+    text-shadow: 3px 2px 3px rgba(255,255,255,.2);
+}
