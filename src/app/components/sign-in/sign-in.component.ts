@@ -24,7 +24,8 @@ export class SignInComponent implements OnInit {
       bornData: ['', Validators.required],
       city: ['', Validators.required],
       email: ['',[ Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
-      phone: ['', Validators.required]
+      phone: ['', Validators.required],
+      type: ['', Validators.required]
     })
   }
 
