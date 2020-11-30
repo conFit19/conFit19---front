@@ -1,1 +1,14 @@
-<p>merchandising works!</p>
+<section class="merchandising pt-5 pb-5">
+    <div class="container"> 
+        <div class="d-flex justify-content-between flex-wrap">
+            <div *ngFor="let product of catalogo" class="card product-card">
+                <div>
+                    <img class="fotoProducto" src={{product.foto}} alt="">
+                    <p>{{product.nombre}}</p> 
+                    <p>{{product.precio}} €</p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
