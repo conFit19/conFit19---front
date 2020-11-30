@@ -1,0 +1,21 @@
+.fotoProducto {
+    width: 10rem;
+    height: 10rem;
+}
+
+.merchandising {
+    background-color:#29ada2;
+}
+
+.product-card{
+    width: 15rem;
+    text-align: center;
+    box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.75);
+    padding:1rem;
+}
+
+.product-card:hover {
+   font-weight:bold;
+}
