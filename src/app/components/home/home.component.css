@@ -3,6 +3,7 @@
     background-image: url('../../../assets/landing.png');
     background-size: cover;
     background-position: bottom;
+    background-attachment: fixed;
 }
 
 .landing {
