@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "confitFront"
+    }
+  },
+  "defaultProject": "confitFront",
+  "cli": {
+    "analytics": false
+  }
 }
