@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { UserInterface } from '../models/user-interface';
+import { UserInterface } from '../../models/user-interface';
 
 @Component({
   selector: 'app-log-in',
@@ -11,28 +11,27 @@ import { UserInterface } from '../models/user-interface';
 })
 export class LogInComponent implements OnInit {
 
-  constructor(private authService: AuthService,private router: Router) { }
-  private user:UserInterface = {
-    User:"",
-    contrasena:""
+  
+  user: UserInterface = new UserInterface();
 
-  };
+  constructor(private auth: AuthService,
+              private router: Router) {
+    
+   }
 
   ngOnInit(): void {
   }
-  onLogin(){
-    return this.authService
-    .loginuser(this.user.User, this.user.contrasena)
-    .subscribe(data =>{
-      this.authService.setUser(data.user)
-      let token =data.id;
-      this.authService.setToken(token);
-      this.router.navigate(['/home'])
 
+  acceder(data: NgForm):void{
 
-    },
-    error => console.log(error)
-    );
+    const loginResult = this.auth.login(this.user);
+   
+    if(loginResult){
+      this.router.navigateByUrl('/home');
+    }else{
+      alert('usuario o contraseña incorrectos');
+    }
+    console.log(loginResult);
   }
   
 

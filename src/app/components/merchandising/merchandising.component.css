@@ -4,7 +4,7 @@
 }
 
 .merchandising {
-    background-color:#29ada2;
+    background-color:var(--black);
 }
 
 .product-card{

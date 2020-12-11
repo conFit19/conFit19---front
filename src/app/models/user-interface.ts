@@ -1,4 +1,4 @@
-export interface UserInterface {
-    User?: string;
-    contrasena?: string;
+export class UserInterface {
+    User: string;
+    contrasena: string;
   }

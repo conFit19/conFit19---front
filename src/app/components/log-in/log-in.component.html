@@ -2,7 +2,7 @@
     <div class="container">
         <h1 class="text-center pt-5 pb-3">LogIn</h1>
 
-        <form class="form p-3 shadow " autocomplete="off" #loginForm="ngForm">
+        <form class="form p-3 shadow " autocomplete="off" (ngSubmit)="acceder(loginForm)" #loginForm="ngForm">
             <div class="form-group">
                 <label class="d-flex justify-content-center">Usuario</label>
                 <input 
@@ -11,7 +11,7 @@
                     placeholder="Introduce tu usuario"
                     name="user"
                     id="user"
-                    ngModel
+                    [(ngModel)]="user.User"   
                    
                 >
             </div>
@@ -23,7 +23,7 @@
                     placeholder="Introduce tu constraseña"
                     name="contrasena"
                     id="contrasena"
-                    ngModel
+                    [(ngModel)]="user.contrasena"
                 
                 >
             </div>

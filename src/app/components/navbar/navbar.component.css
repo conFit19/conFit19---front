@@ -1,0 +1,15 @@
+.width {
+    widows: 100%;
+}
+
+
+
+.header {
+    background-color:var(--black);
+    color:var(--white);
+}
+
+.nav_link {
+    color:var(--white) !important;
+
+}

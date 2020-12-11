@@ -2,3 +2,15 @@
 body {
     font-family: 'Cabin', sans-serif;
 }
+
+/* colores */
+
+:root {
+    --black: #15202b;
+    --blue: #1a90da;
+    --lightBlue:#1da0f2;
+    --green:#17bf63;
+    --red:#e02460;
+    --grey:#8899a6;
+    --white:#ffffff;
+  }
