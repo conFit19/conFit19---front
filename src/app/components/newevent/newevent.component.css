@@ -1,0 +1,12 @@
+.signIn {
+    color:var(--white);
+    background-color:var(--black);
+    background-size: cover;
+    background-position: bottom;
+    
+}
+.form {
+    border: 2px solid grey;
+    border-radius:1rem;
+    /* background-color: white; */
+}

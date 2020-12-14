@@ -13,6 +13,7 @@ import { InfoComponent } from './components/info/info.component';
 import { PresencialesComponent } from './components/presenciales/presenciales.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OnlineComponent } from './components/online/online.component';
+import { NeweventComponent } from './components/newevent/newevent.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { OnlineComponent } from './components/online/online.component';
     LogInComponent,
     InfoComponent,
     PresencialesComponent,
-    OnlineComponent
+    OnlineComponent,
+    NeweventComponent
   ],
   imports: [
     BrowserModule,

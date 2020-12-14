@@ -8,6 +8,7 @@ import { OnlineComponent } from './components/online/online.component';
 import { PresencialesComponent } from './components/presenciales/presenciales.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
+import { NeweventComponent } from './components/newevent/newevent.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'login', component: LogInComponent},
   {path: 'presenciales', component: PresencialesComponent},
   {path: 'online', component: OnlineComponent},
+  {path: 'newevent', component: NeweventComponent},
   {path: '**', redirectTo: 'home'}
 
 ];
