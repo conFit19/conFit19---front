@@ -7,6 +7,9 @@ import { MerchandisingComponent } from './components/merchandising/merchandising
 import { OnlineComponent } from './components/online/online.component';
 import { PresencialesComponent } from './components/presenciales/presenciales.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import {NavbarComponent} from './components/navbar/navbar.component';
+
+
 
 const routes: Routes = [
   {path: 'registro', component: SignInComponent},
