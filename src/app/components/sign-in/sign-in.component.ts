@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { SigninService } from 'src/app/services/signin.service';
+
 
 @Component({
   selector: 'app-sign-in',
@@ -9,8 +12,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class SignInComponent implements OnInit {
 
   FormSignIn: FormGroup
+  newUser: any = {};
 
-  constructor(private formConstructor: FormBuilder) { 
+  constructor(private formConstructor: FormBuilder, private signinservice: SigninService) { 
     this.formInputs();
   }
 
@@ -22,11 +26,11 @@ export class SignInComponent implements OnInit {
       name: ['', [Validators.required,Validators.minLength(3)]],
       familyName: ['', [Validators.required,Validators.minLength(2)]],
       password: ['', [Validators.required,Validators.minLength(8)]],
-      bornData: ['', Validators.required],
+      bornDate: ['', Validators.required],
       city: ['', Validators.required],
       email: ['',[ Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
-      phone: ['', Validators.required, Validators.pattern('^[0-9]{2,3}-? ?[0-9]{6,7}$')],
-      type: ['', Validators.required]
+      phone: ['', Validators.required],
+      rol: ['', Validators.required]
     })
   }
 
@@ -51,10 +55,10 @@ export class SignInComponent implements OnInit {
     return this.FormSignIn.get('password').valid && this.FormSignIn.get('password').touched;
   }
   get invalidData():boolean {
-    return this.FormSignIn.get('bornData').invalid && this.FormSignIn.get('bornData').touched;
+    return this.FormSignIn.get('bornDate').invalid && this.FormSignIn.get('bornDate').touched;
   } 
   get validData():boolean {
-    return this.FormSignIn.get('bornData').valid && this.FormSignIn.get('bornData').touched;
+    return this.FormSignIn.get('bornDate').valid && this.FormSignIn.get('bornDate').touched;
   }
   get invalidCity():boolean {
     return this.FormSignIn.get('city').invalid && this.FormSignIn.get('city').touched;
@@ -76,7 +80,6 @@ export class SignInComponent implements OnInit {
   }
 
 
-
   // submit
   registrar(): void {
 
@@ -84,7 +87,14 @@ export class SignInComponent implements OnInit {
 
     console.log(formularioLleno);
     
-    this.FormSignIn.reset();
-  }
+    // this.FormSignIn.reset();
 
+    this.signinservice.addNewUser(formularioLleno)
+      .subscribe((data: any) => {
+        this.newUser = data;
+        console.log(this.newUser);
+      }, error => {
+        alert(`Error al rellenar el formulario`)
+      })
+  } 
 }
