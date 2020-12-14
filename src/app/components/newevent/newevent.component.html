@@ -24,7 +24,6 @@
                     formControlName="description"
                     [class.is-invalid]="invalidDescription"
                     [class.is-valid]="validDescription"
-                
                 ></textarea>
             <small *ngIf="invalidDescription" class="form-text text-danger ">Debes introducir una descripción</small>
             </div>
@@ -39,6 +38,18 @@
                     [class.is-valid]="validCapacity"
                 >
             <small *ngIf="invalidCapacity" class="form-text text-danger ">Debes introducir un aforo máximo</small>
+            </div>
+            <div class="form-group">
+                <label class="d-flex justify-content-center text-light">Edad recomendada</label>
+                <input 
+                    type="text" 
+                    class="form-control"
+                    placeholder="Introduce ua edad recomendada"
+                    formControlName="age"
+                    [class.is-invalid]="invalidAge"
+                    [class.is-valid]="validAge"
+                >
+            <small *ngIf="invalidAge" class="form-text text-danger ">Debes introducir una edad</small>
             </div>
             <div class="form-group">
                 <label class="d-flex justify-content-center text-light">Hora del evento</label>
