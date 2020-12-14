@@ -29,6 +29,18 @@
             <small *ngIf="invalidFamilyName" class="form-text text-danger ">Debes introducir un apellido</small>
             </div>
             <div class="form-group">
+                <label class="d-flex justify-content-center text-light">Contraseña</label>
+                <input 
+                    type="password" 
+                    class="form-control"
+                    placeholder="Introduce una contraseña"
+                    formControlName="password"
+                    [class.is-invalid]="invalidPassword"
+                    [class.is-valid]="validPassword"
+                >
+            <small *ngIf="invalidPassword"  class="form-text text-danger ">Tu contraseña debe contener un mínimo de 8 caracteres</small>
+            </div>
+            <div class="form-group">
                 <label class="d-flex justify-content-center text-light">Fecha de nacimiento</label>
                 <input
                     type="date" 
@@ -80,11 +92,11 @@
                 <p class="d-flex justify-content-center text-light">Tipo de usuario</p>
                 <div class="d-flex justify-content-center flex-column align-items-center">
                     <div class="form-check my-2 ">
-                        <input type="radio" formControlName="type" value="A" checked>
+                        <input type="radio" formControlName="type" value="user" checked>
                         <label class="form-check-label text-light pl-1">Deportista</label>
                     </div>
                     <div class="form-check my-2 ">
-                        <input type="radio" formControlName="type" value="B">
+                        <input type="radio" formControlName="type" value="Admin">
                         <label class="form-check-label text-light pl-1">Organizador</label>
                     </div>
                 </div>

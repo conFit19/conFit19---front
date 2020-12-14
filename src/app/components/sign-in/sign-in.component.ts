@@ -21,6 +21,7 @@ export class SignInComponent implements OnInit {
     this.FormSignIn = this.formConstructor.group({
       name: ['', [Validators.required,Validators.minLength(3)]],
       familyName: ['', [Validators.required,Validators.minLength(2)]],
+      password: ['', [Validators.required,Validators.minLength(8)]],
       bornData: ['', Validators.required],
       city: ['', Validators.required],
       email: ['',[ Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
@@ -42,6 +43,12 @@ export class SignInComponent implements OnInit {
   } 
   get validFamilyName():boolean {
     return this.FormSignIn.get('familyName').valid && this.FormSignIn.get('familyName').touched;
+  }
+  get invalidPassword():boolean {
+    return this.FormSignIn.get('password').invalid && this.FormSignIn.get('password').touched;
+  } 
+  get validPassword():boolean {
+    return this.FormSignIn.get('password').valid && this.FormSignIn.get('password').touched;
   }
   get invalidData():boolean {
     return this.FormSignIn.get('bornData').invalid && this.FormSignIn.get('bornData').touched;

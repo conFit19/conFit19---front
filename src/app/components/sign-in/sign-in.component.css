@@ -1,6 +1,7 @@
 
 .signIn {
-    background-image: url('../../../assets/outdoors2.png');
+    color:var(--white);
+    background-color:var(--black);
     background-size: cover;
     background-position: bottom;
     
