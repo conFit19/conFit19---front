@@ -10,6 +10,8 @@ import { MerchandisingComponent } from './components/merchandising/merchandising
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { InfoComponent } from './components/info/info.component';
+import { PresencialesComponent } from './components/presenciales/presenciales.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,15 @@ import { InfoComponent } from './components/info/info.component';
     MerchandisingComponent,
     NavbarComponent,
     LogInComponent,
-    InfoComponent
+    InfoComponent,
+    PresencialesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

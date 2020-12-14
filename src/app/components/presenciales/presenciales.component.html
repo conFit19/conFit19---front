@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<h1 class="text-center py-5">Actividades presenciales</h1> 
+<div class="container">
+    <div class="d-flex flex-wrap justify-content-around">
+        <div *ngFor="let activity of activitiesList"> 
+            <div class="card mb-4" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">{{activity.name}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">info: {{activity.description}}</li>
+                <li class="list-group-item">Ciudad: {{activity.place}}</li>
+                <li class="list-group-item">Organizado por: {{activity.organizer}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
