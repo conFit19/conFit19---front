@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { InfoComponent } from './components/info/info.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { MerchandisingComponent } from './components/merchandising/merchandising.component';
+import { OnlineComponent } from './components/online/online.component';
 import { PresencialesComponent } from './components/presenciales/presenciales.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'info', component: InfoComponent},
   {path: 'login', component: LogInComponent},
   {path: 'presenciales', component: PresencialesComponent},
+  {path: 'online', component: OnlineComponent},
   {path: '**', redirectTo: 'home'}
 
 ];

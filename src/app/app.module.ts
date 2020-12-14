@@ -12,6 +12,7 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { InfoComponent } from './components/info/info.component';
 import { PresencialesComponent } from './components/presenciales/presenciales.component';
 import { HttpClientModule } from '@angular/common/http';
+import { OnlineComponent } from './components/online/online.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     LogInComponent,
     InfoComponent,
-    PresencialesComponent
+    PresencialesComponent,
+    OnlineComponent
   ],
   imports: [
     BrowserModule,
