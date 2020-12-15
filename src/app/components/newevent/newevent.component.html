@@ -24,7 +24,6 @@
                     formControlName="description"
                     [class.is-invalid]="invalidDescription"
                     [class.is-valid]="validDescription"
-                
                 ></textarea>
             <small *ngIf="invalidDescription" class="form-text text-danger ">Debes introducir una descripción</small>
             </div>
@@ -39,6 +38,18 @@
                     [class.is-valid]="validCapacity"
                 >
             <small *ngIf="invalidCapacity" class="form-text text-danger ">Debes introducir un aforo máximo</small>
+            </div>
+            <div class="form-group">
+                <label class="d-flex justify-content-center text-light">Edad recomendada</label>
+                <input 
+                    type="text" 
+                    class="form-control"
+                    placeholder="Introduce ua edad recomendada"
+                    formControlName="age"
+                    [class.is-invalid]="invalidAge"
+                    [class.is-valid]="validAge"
+                >
+            <small *ngIf="invalidAge" class="form-text text-danger ">Debes introducir una edad</small>
             </div>
             <div class="form-group">
                 <label class="d-flex justify-content-center text-light">Hora del evento</label>
@@ -102,19 +113,19 @@
                 <p class="d-flex justify-content-center text-light">Ubicación</p>
                 <div class="d-flex justify-content-center flex-wrap align-items-center">
                     <div class="form-check my-2 ">
-                        <input type="radio" formControlName="place" value="online">
+                        <input type="radio" formControlName="place" value="Online">
                         <label class="form-check-label text-light pl-1">Online</label>
                     </div>
                     <div class="form-check my-2 ">
-                        <input type="radio" formControlName="place" value="barcelona">
+                        <input type="radio" formControlName="place" value="Barcelona">
                         <label class="form-check-label text-light pl-1">Barcelona</label>
                     </div>
                     <div class="form-check my-2 ">
-                        <input type="radio" formControlName="place" value="valencia">
+                        <input type="radio" formControlName="place" value="Valencia">
                         <label class="form-check-label text-light pl-1">Valencia</label>
                     </div>
                     <div class="form-check my-2 ">
-                        <input type="radio" formControlName="place" value="madrid">
+                        <input type="radio" formControlName="place" value="Madrid">
                         <label class="form-check-label text-light pl-1">Madrid</label>
                     </div>
                 </div>

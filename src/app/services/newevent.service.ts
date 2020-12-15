@@ -4,12 +4,12 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class OnlineService {
+export class NeweventService {
 
   constructor(private http: HttpClient) { }
 
-  getAllActivities()  {
-    return this.http.get('http://localhost:3000/eventos/online');
+  addNewEvent(data)  {
+    return this.http.post('http://localhost:3000/eventos',data)
      
   }
 }

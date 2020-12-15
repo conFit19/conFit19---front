@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MerchanService, Product } from 'src/app/services/merchan.service';
+import { MerchanService } from 'src/app/services/merchan.service';
 
 @Component({
   selector: 'app-merchandising',
@@ -8,12 +8,16 @@ import { MerchanService, Product } from 'src/app/services/merchan.service';
 })
 export class MerchandisingComponent implements OnInit {
 
-  catalogo: Product[] = []
+  catalogo: any[] = []
   constructor(private service: MerchanService) { }
 
   ngOnInit(): void {
 
-    this.catalogo = this.service.showMerchan();
+    this.service.showMerchan()
+      .subscribe((data: any) => {
+        this.catalogo = data;
+        console.log(this.catalogo);
+      }, error => {error});
   }
 
 }

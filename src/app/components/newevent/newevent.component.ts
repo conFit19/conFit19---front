@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NeweventService } from 'src/app/services/newevent.service';
 
 @Component({
   selector: 'app-newevent',
@@ -8,10 +9,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class NeweventComponent implements OnInit {
 
-  FormNewEvent: FormGroup
+  FormNewEvent: FormGroup;
+  newEvent: any = {};
 
 
-  constructor(private formConstructor: FormBuilder) { 
+
+  constructor(private formConstructor: FormBuilder, private newEventservice: NeweventService) { 
     this.formEvent();
   }
 
@@ -24,6 +27,7 @@ export class NeweventComponent implements OnInit {
       description: ['', [Validators.required,Validators.minLength(2)]],
       place: ['', Validators.required],
       capacity: ['', Validators.required],
+      age:['', Validators.required],
       time: ['', Validators.required],
       duration: ['', Validators.required],
       type: ['', Validators.required],
@@ -69,6 +73,12 @@ export class NeweventComponent implements OnInit {
   get validDay():boolean {
     return this.FormNewEvent.get('day').valid && this.FormNewEvent.get('day').touched;
   }
+  get invalidAge():boolean {
+    return this.FormNewEvent.get('age').invalid && this.FormNewEvent.get('age').touched;
+  } 
+  get validAge():boolean {
+    return this.FormNewEvent.get('age').valid && this.FormNewEvent.get('age').touched;
+  }
 
 
   createEvent(){
@@ -76,5 +86,13 @@ export class NeweventComponent implements OnInit {
     let formularioLleno = this.FormNewEvent.value;
 
     console.log(formularioLleno);
+
+    this.newEventservice.addNewEvent(formularioLleno)
+    .subscribe((data: any) => {
+      this.newEvent = data;
+      console.log(this.newEvent);
+    }, error => {
+      alert(`Error al rellenar el formulario`)
+    })
   }
 }

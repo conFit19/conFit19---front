@@ -16,6 +16,7 @@ import { OnlineComponent } from './components/online/online.component';
 import { NeweventComponent } from './components/newevent/newevent.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { OrganizatorAreaComponent } from './components/organizator-area/organizator-area.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     OnlineComponent,
     NeweventComponent,
     FooterComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    OrganizatorAreaComponent
   ],
   imports: [
     BrowserModule,
