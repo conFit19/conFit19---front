@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PresencialesService } from 'src/app/services/presenciales.service';
+import { Router, RouterModule } from '@angular/router';
+
 
 
 @Component({
@@ -9,8 +11,10 @@ import { PresencialesService } from 'src/app/services/presenciales.service';
 })
 export class PresencialesComponent implements OnInit {
 
+  
+
   activitiesList: any[] = [];
-  constructor(private presenciales: PresencialesService ) { }
+  constructor(private presenciales: PresencialesService, private router: Router ) { }
 
   ngOnInit(): void {
     this.presenciales.getAllActivities()
@@ -18,6 +22,10 @@ export class PresencialesComponent implements OnInit {
       this.activitiesList = data;
       console.log(this.activitiesList);
     }, error => {error})
+  }
+
+  detailEnvent(){
+    this.router.navigate(["evento", "id"]);
   }
 
 }

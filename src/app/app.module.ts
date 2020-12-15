@@ -19,6 +19,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { OrganizatorAreaComponent } from './components/organizator-area/organizator-area.component';
 import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
 import { NavbarUserComponent } from './components/navbar-user/navbar-user.component';
+import { EventComponent } from './components/event/event.component';
+import { UserAreaComponent } from './components/user-area/user-area.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { NavbarUserComponent } from './components/navbar-user/navbar-user.compon
     ContactUsComponent,
     OrganizatorAreaComponent,
     NavbarAdminComponent,
-    NavbarUserComponent
+    NavbarUserComponent,
+    EventComponent,
+    UserAreaComponent
   ],
   imports: [
     BrowserModule,

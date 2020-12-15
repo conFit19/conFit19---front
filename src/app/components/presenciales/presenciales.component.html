@@ -3,7 +3,7 @@
 <div class="container">
     <div class="d-flex flex-wrap justify-content-around">
         <div *ngFor="let activity of activitiesList"> 
-            <div class="card mb-4" style="width: 18rem;">
+            <a class="card mb-4" style="width: 18rem;" onclick="detailEnvent()">
                 <div class="card-body">
                 <h5 class="card-title">{{activity.name}}</h5>
                 </div>
@@ -15,7 +15,7 @@
                 <li class="list-group-item">Tipo: {{activity.type}}</li>
                 <li class="list-group-item">Dia: {{activity.day | date}}</li>
                 </ul>
-            </div>
+            </a>
         </div>
     </div>
 </div>

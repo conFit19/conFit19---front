@@ -1,0 +1,29 @@
+<app-navbar-user></app-navbar-user>
+<section class="userarea p-5">
+    <div class="container">
+        <h1 class='text-center organizator__titles'>Mi área</h1>
+        <h2 class='organizator__titles'>Bienvenido a tu espacio</h2>
+    </div>  
+</section>
+<section class="miseventos">
+    <h2 class="text-center py-5">Tus eventos</h2> 
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-around">
+            <div *ngFor="let activity of activitiesList"> 
+                <div class="card mb-4" style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">{{activity.Event.name}}</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item">info: {{activity.Event.description}}</li>
+                    <li class="list-group-item">Ciudad: {{activity.Event.place}}</li>
+                    <li class="list-group-item">Aforo: {{activity.Event.capacity}}</li>
+                    <li class="list-group-item">Edad recomendada: {{activity.Event.age}}</li>
+                    <li class="list-group-item">Tipo: {{activity.Event.type}}</li>
+                    <li class="list-group-item">Dia: {{activity.Event.day | date}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
