@@ -12,4 +12,7 @@ export class EventService {
   showEvent(id){
     return this.http.get(`http://localhost:3000/eventos/detailevent/${id}`);
   }
+
+ 
+
 }

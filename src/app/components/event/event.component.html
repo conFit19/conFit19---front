@@ -1,1 +1,17 @@
-<p>event works!</p>
+<app-navbar></app-navbar>
+<section class="event pb-5">
+    <div class="container">
+        <h1 class="text-center py-5">{{event.name}}</h1>
+        <div class="d-flex justify-content-around">
+            <p>Descripción: {{event.description}}</p>
+            <div>
+                <p>Aforo máximo: {{event.capacity}}</p>
+                <p>Ubicación: {{event.place}}</p>
+                <p>Duración aproximada: {{event.time}}</p>
+                <p>Edad recomendad: {{event.age}}</p>
+                <p>Tipo de actividad: {{event.type}}</p>
+            </div>
+        </div>
+     
+    </div>
+</section>

@@ -1,21 +1,19 @@
 <app-navbar></app-navbar>
-<h1 class="text-center py-5">Actividades presenciales</h1> 
-<div class="container">
-    <div class="d-flex flex-wrap justify-content-around">
-        <div *ngFor="let activity of activitiesList"> 
-            <a class="card mb-4" style="width: 18rem;" onclick="detailEnvent()">
-                <div class="card-body">
-                <h5 class="card-title">{{activity.name}}</h5>
+<section class="actividades__presenciales">
+    <h1 class="text-center py-5">Actividades presenciales</h1> 
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-around">
+            <div *ngFor="let activity of activitiesList"> 
+                <div class="card mb-4" style="width: 18rem;" (click)="detailEvent(activity.id)">
+                    <div class="card-body">
+                    <h5 class="card-title">{{activity.name}}</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Ubicación: {{activity.place}}</li>
+                    <li class="list-group-item">Dia: {{activity.day | date}}</li>
+                    </ul>
                 </div>
-                <ul class="list-group list-group-flush">
-                <li class="list-group-item">info: {{activity.description}}</li>
-                <li class="list-group-item">Ciudad: {{activity.place}}</li>
-                <li class="list-group-item">Aforo: {{activity.capacity}}</li>
-                <li class="list-group-item">Edad recomendada: {{activity.age}}</li>
-                <li class="list-group-item">Tipo: {{activity.type}}</li>
-                <li class="list-group-item">Dia: {{activity.day | date}}</li>
-                </ul>
-            </a>
+            </div>
         </div>
     </div>
-</div>
+</section>

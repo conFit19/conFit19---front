@@ -24,8 +24,9 @@ export class PresencialesComponent implements OnInit {
     }, error => {error})
   }
 
-  detailEnvent(){
-    this.router.navigate(["evento", "id"]);
+  detailEvent(id){
+    console.log(id);
+    this.router.navigate(["/evento", id]);
   }
 
 }
