@@ -10,6 +10,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import { NeweventComponent } from './components/newevent/newevent.component';
 import {ContactUsComponent} from './components/contact-us/contact-us.component'
+import { OrganizatorAreaComponent } from './components/organizator-area/organizator-area.component';
 
 
 
@@ -22,7 +23,9 @@ const routes: Routes = [
   {path: 'presenciales', component: PresencialesComponent},
   {path: 'online', component: OnlineComponent},
   {path: 'newevent', component: NeweventComponent},
+  // {path: 'evento', component: EventComponent},
   {path: 'contact', component: ContactUsComponent},
+  {path: 'organizador', component: OrganizatorAreaComponent},
   {path: '**', redirectTo: 'home'}
 
 ];

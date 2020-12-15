@@ -1,0 +1,18 @@
+.organizator {
+    background-image: url('../../../assets/tenis.png');
+    background-size: cover;
+    /* background-position: bottom; */
+    color:var(--white);
+}
+
+.organizator__titles {
+    text-shadow: 3px 2px 3px var(--black);
+}
+
+.miseventos {
+    background-color: var(--black);
+}
+
+.miseventos h2 {
+    color: var(--white);
+}

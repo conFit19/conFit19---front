@@ -17,6 +17,8 @@ import { NeweventComponent } from './components/newevent/newevent.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { OrganizatorAreaComponent } from './components/organizator-area/organizator-area.component';
+import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
+import { NavbarUserComponent } from './components/navbar-user/navbar-user.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { OrganizatorAreaComponent } from './components/organizator-area/organiza
     NeweventComponent,
     FooterComponent,
     ContactUsComponent,
-    OrganizatorAreaComponent
+    OrganizatorAreaComponent,
+    NavbarAdminComponent,
+    NavbarUserComponent
   ],
   imports: [
     BrowserModule,

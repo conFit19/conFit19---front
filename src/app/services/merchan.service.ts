@@ -17,7 +17,7 @@ export class MerchanService {
     // ]
    }
    showMerchan(){
-    return this.http.get('http://localhost:3000/merchan');
+    return this.http.get('http://localhost:3000/merchan/merchan');
   }
 }
 
