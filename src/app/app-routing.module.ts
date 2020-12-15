@@ -9,6 +9,7 @@ import { PresencialesComponent } from './components/presenciales/presenciales.co
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import { NeweventComponent } from './components/newevent/newevent.component';
+import {ContactUsComponent} from './components/contact-us/contact-us.component'
 
 
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'presenciales', component: PresencialesComponent},
   {path: 'online', component: OnlineComponent},
   {path: 'newevent', component: NeweventComponent},
+  {path: 'contact', component: ContactUsComponent},
   {path: '**', redirectTo: 'home'}
 
 ];
