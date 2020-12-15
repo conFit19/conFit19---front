@@ -14,6 +14,7 @@ import { PresencialesComponent } from './components/presenciales/presenciales.co
 import { HttpClientModule } from '@angular/common/http';
 import { OnlineComponent } from './components/online/online.component';
 import { NeweventComponent } from './components/newevent/newevent.component';
+import { OrganizatorAreaComponent } from './components/organizator-area/organizator-area.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NeweventComponent } from './components/newevent/newevent.component';
     InfoComponent,
     PresencialesComponent,
     OnlineComponent,
-    NeweventComponent
+    NeweventComponent,
+    OrganizatorAreaComponent
   ],
   imports: [
     BrowserModule,
