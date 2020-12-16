@@ -24,14 +24,20 @@ export class LogInComponent implements OnInit {
 
   acceder(data: NgForm):void{
 
-    const loginResult = this.auth.login(this.user);
+    console.log(data.value);
+
+    // const loginResult = this.auth.login(data.value);
+    this.auth.login(data.value);
+      
+    
+
    
-    if(loginResult){
-      this.router.navigateByUrl('/home');
-    }else{
-      alert('usuario o contraseña incorrectos');
-    }
-    console.log(loginResult);
+    // if(loginResult){
+    //   // this.router.navigateByUrl('/home');
+    // }else{
+    //   alert('usuario o contraseña incorrectos');
+    // }
+    // console.log(loginResult);
   }
   
 

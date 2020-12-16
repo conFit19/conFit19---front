@@ -13,7 +13,7 @@ export class OrganizatorAreaComponent implements OnInit {
   constructor(private service: OrganizereventsService) { }
 
   ngOnInit(): void {
-    this.service.getMyAdminActivities(1)
+    this.service.getMyAdminActivities(Number(sessionStorage.getItem('id')))
     .subscribe((data: any) => {
       this.activitiesList = data;
       console.log(this.activitiesList);

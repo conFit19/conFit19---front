@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SigninService } from 'src/app/services/signin.service';
 
 
@@ -13,7 +14,7 @@ export class SignInComponent implements OnInit {
   FormSignIn: FormGroup
   newUser: any = {};
 
-  constructor(private formConstructor: FormBuilder, private signinservice: SigninService) { 
+  constructor(private formConstructor: FormBuilder, private signinservice: SigninService, private router: Router) { 
     this.formInputs();
   }
 
@@ -86,14 +87,17 @@ export class SignInComponent implements OnInit {
 
     console.log(formularioLleno);
     
-    // this.FormSignIn.reset();
+    this.FormSignIn.reset();
 
     this.signinservice.addNewUser(formularioLleno)
       .subscribe((data: any) => {
         this.newUser = data;
         console.log(this.newUser);
+        alert('Usuario creado')
       }, error => {
         alert(`Error al rellenar el formulario`)
       })
+    
+    this.router.navigateByUrl('/home');
   } 
 }

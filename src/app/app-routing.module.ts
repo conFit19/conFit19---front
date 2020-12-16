@@ -13,6 +13,8 @@ import {ContactUsComponent} from './components/contact-us/contact-us.component'
 import { OrganizatorAreaComponent } from './components/organizator-area/organizator-area.component';
 import { EventComponent } from './components/event/event.component';
 import { UserAreaComponent } from './components/user-area/user-area.component';
+import { AuthGuard } from './guards/auth.guard';
+import { AuthUserGuard } from './guards/auth-user.guard';
 
 
 
@@ -27,8 +29,8 @@ const routes: Routes = [
   {path: 'newevent', component: NeweventComponent},
   {path: 'evento/:id', component: EventComponent},
   {path: 'contact', component: ContactUsComponent},
-  {path: 'organizador', component: OrganizatorAreaComponent},
-  {path: 'usuario', component: UserAreaComponent},
+  {path: 'organizador', component: OrganizatorAreaComponent,canActivate: [AuthGuard]},
+  {path: 'usuario', component: UserAreaComponent, canActivate: [AuthUserGuard]},
   {path: '**', redirectTo: 'home'}
 
 ];

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NeweventService } from 'src/app/services/newevent.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class NeweventComponent implements OnInit {
 
 
 
-  constructor(private formConstructor: FormBuilder, private newEventservice: NeweventService) { 
+  constructor(private formConstructor: FormBuilder, private newEventservice: NeweventService, private router: Router) { 
     this.formEvent();
   }
 
@@ -31,7 +32,8 @@ export class NeweventComponent implements OnInit {
       time: ['', Validators.required],
       duration: ['', Validators.required],
       type: ['', Validators.required],
-      day: ['', Validators.required]
+      day: ['', Validators.required],
+      UserId: [Number(sessionStorage.getItem('id'))]
     })
   }
 
@@ -91,8 +93,10 @@ export class NeweventComponent implements OnInit {
     .subscribe((data: any) => {
       this.newEvent = data;
       console.log(this.newEvent);
+      this.router.navigateByUrl('/organizador')
+      alert('evento creado');
     }, error => {
-      alert(`Error al rellenar el formulario`)
+      alert(`Error al rellenar el formulario`);
     })
   }
 }

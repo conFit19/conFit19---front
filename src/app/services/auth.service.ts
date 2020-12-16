@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { UserInterface } from '../models/user-interface';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -7,18 +9,47 @@ import { UserInterface } from '../models/user-interface';
 })
 export class AuthService {
 
-  login(user: UserInterface){
-    if(user.User === 'escritor@articulos.com' && user.contrasena === 'misarticulos'){
-      sessionStorage.setItem('auth', 'true');
+  user: UserInterface = new UserInterface();
+
+  constructor(private http: HttpClient, private router: Router) { }
+
+
+  login(userObject){
+    // PETICION / REQUEST HTTP a localhost:3000/auth hecho
+    this.http.post('http://localhost:3000/auth',userObject )
+    .subscribe((data: UserInterface) => {
+      this.user = data;
+      // console.log('Rol',this.user.rol);
+      sessionStorage.setItem('rol', this.user.rol);
+      sessionStorage.setItem('id', this.user.id);
+      if(this.user.rol === 'Admin'){
+        this.router.navigateByUrl('/organizador');
+      }else{
+        this.router.navigateByUrl('/usuario');
+      }
+    }, error => {
+      console.log(error);
+    })
+
+
+    // if(user.email === 'escritor@articulos.com' && user.password === 'misarticulos'){
+    //   sessionStorage.setItem('auth', 'true');
+    //   return true;  
+    // }else {
+    //   return false;
+    // }
+  }
+
+  isAuthAdmin(): boolean {
+    if (sessionStorage.getItem('rol') === 'Admin'){
       return true;
-      
-    }else {
+    }else{
       return false;
     }
   }
 
-  isAuth(): boolean {
-    if (sessionStorage.getItem('auth') === 'true'){
+  isAuthUser(): boolean {
+    if (sessionStorage.getItem('rol') === 'User'){
       return true;
     }else{
       return false;

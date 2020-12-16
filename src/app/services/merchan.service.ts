@@ -11,6 +11,9 @@ export class MerchanService {
    showMerchan(){
     return this.http.get('http://localhost:3000/merchan/merchan');
   }
+  createProduct() {
+    // recuperaremos el token del session/local Storage para poder hacer la petición al backend con la cabecera del token
+  }
 }
 
 

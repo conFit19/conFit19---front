@@ -16,7 +16,7 @@ export class MerchandisingComponent implements OnInit {
     this.service.showMerchan()
       .subscribe((data: any) => {
         this.catalogo = data;
-        console.log(this.catalogo);
+        // console.log(this.catalogo);
       }, error => {error});
   }
 

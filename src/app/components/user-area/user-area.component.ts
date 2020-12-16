@@ -13,7 +13,7 @@ export class UserAreaComponent implements OnInit {
   constructor(private service: UserEventsService) { }
 
   ngOnInit(): void {
-    this.service.getUserActivities(1)
+    this.service.getUserActivities(sessionStorage.getItem('id'))
       .subscribe((data: any) => {
         this.activitiesList = data;
         console.log(this.activitiesList);

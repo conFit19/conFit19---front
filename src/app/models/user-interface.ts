@@ -1,4 +1,6 @@
 export class UserInterface {
-    User: string;
-    contrasena: string;
+    email: string;
+    password: string;
+    rol: string;
+    id: string;
   }
