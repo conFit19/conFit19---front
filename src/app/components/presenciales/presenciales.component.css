@@ -1,4 +1,5 @@
 .actividades__presenciales {
     background-image:url('../../../assets/cancha.png');
     background-position: center;
+    height: 100vh;
 }

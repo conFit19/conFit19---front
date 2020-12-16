@@ -31,13 +31,6 @@ export class AuthService {
       console.log(error);
     })
 
-
-    // if(user.email === 'escritor@articulos.com' && user.password === 'misarticulos'){
-    //   sessionStorage.setItem('auth', 'true');
-    //   return true;  
-    // }else {
-    //   return false;
-    // }
   }
 
   isAuthAdmin(): boolean {
