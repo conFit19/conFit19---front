@@ -21,6 +21,7 @@ import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.com
 import { NavbarUserComponent } from './components/navbar-user/navbar-user.component';
 import { EventComponent } from './components/event/event.component';
 import { UserAreaComponent } from './components/user-area/user-area.component';
+import { EventHomeComponent } from './components/event-home/event-home.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { UserAreaComponent } from './components/user-area/user-area.component';
     NavbarAdminComponent,
     NavbarUserComponent,
     EventComponent,
-    UserAreaComponent
+    UserAreaComponent,
+    EventHomeComponent
   ],
   imports: [
     BrowserModule,
