@@ -17,6 +17,7 @@ import { NeweventComponent } from './components/newevent/newevent.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { OrganizatorAreaComponent } from './components/organizator-area/organizator-area.component';
+import { EventHomeComponent } from './components/event-home/event-home.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { OrganizatorAreaComponent } from './components/organizator-area/organiza
     NeweventComponent,
     FooterComponent,
     ContactUsComponent,
-    OrganizatorAreaComponent
+    OrganizatorAreaComponent,
+    EventHomeComponent
   ],
   imports: [
     BrowserModule,
