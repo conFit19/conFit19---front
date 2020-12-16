@@ -12,6 +12,12 @@
                 <p>Tipo de actividad: {{event.type}}</p>
             </div>
         </div>
-     
+    </div>
+    <div class="eltiempo">
+        <div class="container">
+            <p>temperatura:{{weather.main.temp}} </p>
+            <p>temperatura: {{weather.weather[0].description}} </p>
+            <img src="https://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png">
+        </div>
     </div>
 </section>
