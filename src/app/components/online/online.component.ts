@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { OnlineService } from 'src/app/services/online.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { OnlineService } from 'src/app/services/online.service';
 export class OnlineComponent implements OnInit {
 
   activitiesList: any[] = [];
-  constructor(private presenciales: OnlineService ) { }
+  constructor(private presenciales: OnlineService, private router: Router) { }
 
   ngOnInit(): void {
     this.presenciales.getAllActivities()
@@ -17,6 +18,11 @@ export class OnlineComponent implements OnInit {
       this.activitiesList = data;
       console.log(this.activitiesList);
     }, error => {error})
+  }
+
+  detailEvent(id){
+    console.log(id);
+    this.router.navigate(["/evento", id]);
   }
 
 }
