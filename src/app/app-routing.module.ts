@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'login', component: LogInComponent},
   {path: 'presenciales', component: PresencialesComponent},
   {path: 'online', component: OnlineComponent},
-  {path: 'newevent', component: NeweventComponent},
+  {path: 'newevent', component: NeweventComponent,canActivate: [AuthGuard]},
   {path: 'evento/:id', component: EventComponent},
   {path: 'contact', component: ContactUsComponent},
   {path: 'organizador', component: OrganizatorAreaComponent,canActivate: [AuthGuard]},
