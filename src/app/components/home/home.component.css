@@ -4,10 +4,17 @@
     background-position: bottom;
 }
 
+.home__logo {
+    width: 8rem;
+    object-fit: contain;
+    margin-right: 8rem;
+}
+
 .btn-home {
     box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.75);
+    background-color: var(--black) !important;
 }
 
 .landing {
@@ -21,4 +28,5 @@
 .landing__description {
     max-width: 20rem;
     text-shadow: 3px 2px 3px rgba(255,255,255,.2);
+    color: var(--white);
 }

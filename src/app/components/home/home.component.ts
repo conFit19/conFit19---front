@@ -12,4 +12,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+   // show or hide
+   get isLogged():boolean {
+    return sessionStorage.getItem('rol')!=='Admin' && sessionStorage.getItem('rol')!=='User'
+  } 
+
 }

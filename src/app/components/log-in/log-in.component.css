@@ -1,9 +1,11 @@
 .signIn {
-    background-image: url('../../../assets/outdoors2.png');
-    background-size: cover;
-    background-position: bottom;
+    background-image:url('../../../assets/cancha.png');
     height: 100vh;
     
+}
+
+.login__background{
+    background-color:var(--black);
 }
 .form {
     border: 2px solid grey;

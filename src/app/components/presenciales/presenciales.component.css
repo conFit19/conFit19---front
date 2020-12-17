@@ -3,3 +3,10 @@
     background-position: center;
     height: 100%;
 }
+
+.ficha {
+    width: 18rem;
+}
+.ficha:hover{
+    width: 19rem;
+}
