@@ -1,7 +1,24 @@
 .event {
     background-color:var(--green);
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url('../../../assets/fondo2.jpg');
 }
 
 .apuntarse {
     height:2.5rem;
 }
+/* .box__event{
+    border:1px solid #ffffff
+} */
+.background__box{
+    background-color: var(--black);
+    color: #ffffff;
+    border:1px solid #ffffff;
+    border-radius: 2rem;
+}
+.bold{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
