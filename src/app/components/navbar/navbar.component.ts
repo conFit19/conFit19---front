@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit {
    get isLogged():boolean {
     return sessionStorage.getItem('rol')!=='Admin' && sessionStorage.getItem('rol')!=='User'
   } 
+  
 
   get isNotLogged():boolean {
     return sessionStorage.getItem('rol')==='Admin' || sessionStorage.getItem('rol')==='User'
