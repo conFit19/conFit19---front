@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NeweventService } from 'src/app/services/newevent.service';
+import { EventService } from 'src/app/services/event.service';
 
 @Component({
   selector: 'app-newevent',
@@ -15,7 +15,7 @@ export class NeweventComponent implements OnInit {
 
 
 
-  constructor(private formConstructor: FormBuilder, private newEventservice: NeweventService, private router: Router) { 
+  constructor(private formConstructor: FormBuilder, private newEventservice: EventService, private router: Router) { 
     this.formEvent();
   }
 

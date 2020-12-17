@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { OnlineService } from 'src/app/services/online.service';
+import { EventService } from 'src/app/services/event.service';
 
 @Component({
   selector: 'app-online',
@@ -10,10 +10,10 @@ import { OnlineService } from 'src/app/services/online.service';
 export class OnlineComponent implements OnInit {
 
   activitiesList: any[] = [];
-  constructor(private presenciales: OnlineService, private router: Router) { }
+  constructor(private presenciales: EventService, private router: Router) { }
 
   ngOnInit(): void {
-    this.presenciales.getAllActivities()
+    this.presenciales.getAllActivitiesOnline()
     .subscribe((data: any) => {
       this.activitiesList = data;
       console.log(this.activitiesList);

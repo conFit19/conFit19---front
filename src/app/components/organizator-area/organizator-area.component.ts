@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrganizereventsService } from 'src/app/services/organizerevents.service';
+import { EventService } from 'src/app/services/event.service';
 
 @Component({
   selector: 'app-organizator-area',
@@ -10,7 +10,7 @@ export class OrganizatorAreaComponent implements OnInit {
 
   activitiesList: any[] = [];
 
-  constructor(private service: OrganizereventsService) { }
+  constructor(private service: EventService) { }
 
   ngOnInit(): void {
     this.service.getMyAdminActivities(Number(sessionStorage.getItem('id')))

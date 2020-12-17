@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PresencialesService } from 'src/app/services/presenciales.service';
-import { Router, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
+import { EventService } from 'src/app/services/event.service';
 
 
 
@@ -14,10 +14,10 @@ export class PresencialesComponent implements OnInit {
   
 
   activitiesList: any[] = [];
-  constructor(private presenciales: PresencialesService, private router: Router ) { }
+  constructor(private presenciales: EventService, private router: Router ) { }
 
   ngOnInit(): void {
-    this.presenciales.getAllActivities()
+    this.presenciales.getAllActivitiesPresenciales()
     .subscribe((data: any) => {
       this.activitiesList = data;
       console.log(this.activitiesList);

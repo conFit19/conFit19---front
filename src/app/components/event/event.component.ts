@@ -4,6 +4,7 @@ import { Params} from '@angular/router'
 import { EventService } from 'src/app/services/event.service';
 import { WeatherapiService } from 'src/app/services/weatherapi.service';
 import { HttpClient } from '@angular/common/http';
+import { UserEventsService } from 'src/app/services/user-events.service';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class EventComponent implements OnInit {
   event: any = {};
   weather: any = {};
   maps: any = {};
-  constructor(private route:ActivatedRoute, private service: EventService, private weatherservice: WeatherapiService, private http: HttpClient, private router: Router) { }
+  constructor(private route:ActivatedRoute, private service: EventService, private weatherservice: WeatherapiService, private http: HttpClient, private router: Router, private servicioRegistro: UserEventsService) { }
 
 
   ngOnInit(): void {
@@ -54,7 +55,7 @@ export class EventComponent implements OnInit {
     let data = {UserId : sessionStorage.getItem('id'),
                 EventId: EventId}
     
-    this.service.apuntarseEvento(data)
+    this.servicioRegistro.apuntarseEvento(data)
       .subscribe((data: any) => {
         this.nuevoRegistro = data;
         console.log(this.nuevoRegistro);
