@@ -22,6 +22,7 @@ export class AuthService {
       // console.log('Rol',this.user.rol);
       sessionStorage.setItem('rol', this.user.rol);
       sessionStorage.setItem('id', this.user.id);
+      
       if(this.user.rol === 'Admin'){
         this.router.navigateByUrl('/organizador');
       }else{

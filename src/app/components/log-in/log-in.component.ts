@@ -28,16 +28,6 @@ export class LogInComponent implements OnInit {
 
     // const loginResult = this.auth.login(data.value);
     this.auth.login(data.value);
-      
-    
-
-   
-    // if(loginResult){
-    //   // this.router.navigateByUrl('/home');
-    // }else{
-    //   alert('usuario o contraseña incorrectos');
-    // }
-    // console.log(loginResult);
   }
   
 

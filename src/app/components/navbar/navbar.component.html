@@ -19,10 +19,14 @@
           </li>
           <li class="nav-item">
             <a class="nav-link nav_link" routerLink="/info">Info</a>
+          </li><li class="nav-item">
+            <a class="nav-link nav_link" (click)="goToYourArea()" >Tu área</a>
           </li>
+          <!-- <a class="p-2 text-dark" routerLink="/newEvent" >Crear Evento</a> -->
         </ul>
         <form class="d-flex ml-auto">
-          <a class="btn btn-outline-info" routerLink="/login">Login</a>
+          <a class="btn btn-outline-info" id="login" routerLink="/login" *ngIf="isLogged">Login</a>
+          <a class="btn btn-outline-danger" (click)="logOut()" *ngIf="isNotLogged">Logout</a>
         </form>
       </div>
     </div>

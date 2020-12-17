@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Params} from '@angular/router'
 import { EventService } from 'src/app/services/event.service';
 import { WeatherapiService } from 'src/app/services/weatherapi.service';
@@ -13,17 +13,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EventComponent implements OnInit {
 
+  nuevoRegistro: any = {};
   event: any = {};
   weather: any = {};
   maps: any = {};
-  constructor(private route:ActivatedRoute, private service: EventService, private weatherservice: WeatherapiService, private http: HttpClient) { }
+  constructor(private route:ActivatedRoute, private service: EventService, private weatherservice: WeatherapiService, private http: HttpClient, private router: Router) { }
 
-
-  // getMap(coordenadaX, coordenadaY){
-
-  //   return this.http.get(`http://maps.openweathermap.org/maps/2.0/weather/TD2/50/${coordenadaX}/${coordenadaY}&appid=APIKEY`)
-
-  // }
 
   ngOnInit(): void {
 
@@ -50,6 +45,23 @@ export class EventComponent implements OnInit {
     })
 
     
-  }
 
+   
+  }
+  suscribeEvent(EventId){
+    // let myNewEvent = this.thisNewEvent.value;
+
+    let data = {UserId : sessionStorage.getItem('id'),
+                EventId: EventId}
+    
+    this.service.apuntarseEvento(data)
+      .subscribe((data: any) => {
+        this.nuevoRegistro = data;
+        console.log(this.nuevoRegistro);
+        alert('Te has apuntado al evento!')
+      }, error => {
+        console.error(error)
+      })
+    this.router.navigateByUrl('/usuario')
+  }
 }

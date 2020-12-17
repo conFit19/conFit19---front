@@ -17,8 +17,6 @@ import { NeweventComponent } from './components/newevent/newevent.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { OrganizatorAreaComponent } from './components/organizator-area/organizator-area.component';
-import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
-import { NavbarUserComponent } from './components/navbar-user/navbar-user.component';
 import { EventComponent } from './components/event/event.component';
 import { UserAreaComponent } from './components/user-area/user-area.component';
 import { EventHomeComponent } from './components/event-home/event-home.component';
@@ -38,8 +36,6 @@ import { EventHomeComponent } from './components/event-home/event-home.component
     FooterComponent,
     ContactUsComponent,
     OrganizatorAreaComponent,
-    NavbarAdminComponent,
-    NavbarUserComponent,
     EventComponent,
     UserAreaComponent,
     EventHomeComponent

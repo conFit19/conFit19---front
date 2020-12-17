@@ -1,3 +1,7 @@
 .event {
     background-color:var(--green);
 }
+
+.apuntarse {
+    height:2.5rem;
+}

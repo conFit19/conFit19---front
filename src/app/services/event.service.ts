@@ -13,6 +13,8 @@ export class EventService {
     return this.http.get(`http://localhost:3000/eventos/detailevent/${id}`);
   }
 
- 
+  apuntarseEvento(data){
+    return this.http.post('http://localhost:3000/registro', data )
+  }
 
 }
