@@ -25,6 +25,7 @@ export class SignInComponent implements OnInit {
     this.FormSignIn = this.formConstructor.group({
       name: ['', [Validators.required,Validators.minLength(3)]],
       familyName: ['', [Validators.required,Validators.minLength(2)]],
+      // profilePicture: [''],
       password: ['', [Validators.required,Validators.minLength(8)]],
       bornDate: ['', Validators.required],
       city: ['', Validators.required],
@@ -97,6 +98,11 @@ export class SignInComponent implements OnInit {
       }, error => {
         alert(`Error al rellenar el formulario`)
       })
+    // this.signinservice.addProlifePicture(formularioLleno.profilePicture, 9)
+    //   .subscribe((data: any) => {
+    //     console.log('foto subida',data)
+    //   }, error => {
+    //     console.log(error)})
     
     this.router.navigateByUrl('/home');
   } 

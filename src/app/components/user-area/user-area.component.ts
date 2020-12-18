@@ -8,6 +8,7 @@ import { UserEventsService } from 'src/app/services/user-events.service';
 })
 export class UserAreaComponent implements OnInit {
 
+  nombre = sessionStorage.getItem('name')
   activitiesList: any[] = [];
   
   constructor(private service: UserEventsService) { }

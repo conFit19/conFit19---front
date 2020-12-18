@@ -1,7 +1,7 @@
 <section class="organizator p-5">
     <div class="container">
         <h1 class='text-center organizator__titles'>Mi área</h1>
-        <h2 class='organizator__titles'>Bienvenido a tu espacio</h2>
+        <h2 class='organizator__titles'>Bienvenido a tu espacio: {{nombre}}</h2>
    
         <div class="d-grid gap-2">
             <a class="btn btn-primary" routerLink="/newevent" type="button">Crear Evento</a>
@@ -10,7 +10,7 @@
 </section>
 <section class="miseventos">
     <h2 class="text-center py-5">Tus eventos creados</h2> 
-    <div class="container">
+    <div class="container">  
         <div class="d-flex flex-wrap justify-content-around">
             <div *ngFor="let activity of activitiesList"> 
                 <div class="card mb-4" style="width: 18rem;">

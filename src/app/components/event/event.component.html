@@ -2,27 +2,24 @@
     <div class="container  background__box">
         <div class="p-3 shadow login__background">
             <div class="container">
-                <h1 class="text-center py-5">{{event.name}}</h1>
-                
-                <div class="d-flex justify-content-around">
-                    <p><span class="bold">Descripción</span>: {{event.description}}</p>
-                    <div>
-                        <p><span class="bold">Aforo máximo</span>: {{event.capacity}}</p>
-                        <p><span class="bold">Ubicación</span>: {{event.place}}</p>
-                        <p><span class="bold">Duración aproximada</span>: {{event.time}}</p>
-                        <p><span class="bold">Edad recomendad</span>: {{event.age}}</p>
-                        <p><span class="bold">Tipo de actividad</span>: {{event.type}}</p>
+                <div class="row">
+                    <h1 class="pt-5 col-12 col-md-6 text-center">{{event.name}}</h1>
+                    <div class="col-12 col-md-6 pt-5">
+                        <p><span class="bold">Descripción</span>: {{event.description}}</p>
+                        <div>
+                            <p><span class="bold">Aforo máximo</span>: {{event.capacity}}</p>
+                            <p><span class="bold">Ubicación</span>: {{event.place}}</p>
+                            <p><span class="bold">Duración aproximada</span>: {{event.time}}</p>
+                            <p><span class="bold">Edad recomendad</span>: {{event.age}}</p>
+                            <p><span class="bold">Tipo de actividad</span>: {{event.type}}</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="eltiempo d-flex justify-content-around">
-                    <div>
-                        <p><span class="bold">temperatura</span>:{{weather.main.temp}} </p>
-                        <p><span class="bold">Condición climática</span>: {{weather.weather[0].description}} </p>
-                        <img src="https://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png">
+                    <div class="col-12 col-md-6">
+                        <p class="text-center"><span class="bold">Temperatura</span>:{{weather.main.temp}} </p>
+                        <p class="text-center"><span class="bold">Condición climática</span>: {{weather.weather[0].description}} </p>
+                        <img class="eltiempo__img" src="https://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png">
                     </div>
-                    <button class="btn btn-primary apuntarse" (click)="suscribeEvent(event.id)">Apuntarse</button>
+                    <button class="btn btn-primary apuntarse col-md-6 col-12 apuntarse" (click)="suscribeEvent(event.id)">Apuntarse</button>
                 </div>
             </div>
         </div>

@@ -14,4 +14,8 @@ export class SigninService {
     return this.http.post('http://localhost:3000/user',data)
      
   }
+
+  addProlifePicture(data,id){
+    return this.http.post(`http://localhost:3000/single-upload/${id}`,data)
+  }
 }

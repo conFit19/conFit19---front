@@ -8,6 +8,7 @@ import { EventService } from 'src/app/services/event.service';
 })
 export class OrganizatorAreaComponent implements OnInit {
 
+  nombre = sessionStorage.getItem('name')
   activitiesList: any[] = [];
 
   constructor(private service: EventService) { }

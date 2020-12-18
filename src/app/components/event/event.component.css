@@ -8,9 +8,7 @@
 .apuntarse {
     height:2.5rem;
 }
-/* .box__event{
-    border:1px solid #ffffff
-} */
+
 .background__box{
     background-color: var(--black);
     color: #ffffff;
@@ -20,5 +18,14 @@
 .bold{
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+.eltiempo__img{
+    display: block;
+    margin: 0 auto;
+}
+
+.apuntarse{
+    margin-top: 7rem;
 }
 

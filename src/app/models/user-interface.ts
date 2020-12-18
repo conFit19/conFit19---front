@@ -3,4 +3,5 @@ export class UserInterface {
     password: string;
     rol: string;
     id: string;
+    name: string;
   }
