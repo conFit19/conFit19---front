@@ -2,16 +2,16 @@
     <div class="container">
         <div class="landing">
             <div class="d-flex justify-content-between flex-wrap">
-                <h1 class="pt-3 landing__title">conFit 19</h1>
-                <img class="home__logo" src="../../../assets/logo_solo.png" alt="logotipo">
+                <h1 class="pt-3 landing__title" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true">conFit 19</h1>
+                <img class="home__logo" data-aos="fade-left" data-aos-duration="3000" src="../../../assets/logo_solo.png" alt="logotipo">
             </div>
-            <p  data-aos="fade-right" data-aos-once="true" class="landing__description">Confit es la plataforma donde encontrarás eventos para mantenerte en forma durante la cuarentena.</p>
+            <p  data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" class="landing__description">Confit es la plataforma donde encontrarás eventos para mantenerte en forma durante la cuarentena.</p>
         </div>
         <a routerLink="/login" class="btn btn-home btn-outline-info" *ngIf="isLogged">Log in</a>
         <a routerLink="/registro" class="btn btn-home ml-3 btn-outline-info"  *ngIf="isLogged">Registro</a>
     </div>
 </section>
-<section class="merch" id="merchandising"  data-aos="fade-right">
+<section class="merch" id="merchandising" >
     <app-merchandising></app-merchandising>
 </section>
 <section>

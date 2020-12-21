@@ -1,8 +1,8 @@
-<section class="merchandising pt-5 pb-5">
+<section class="merchandising pt-5 pb-5"  >
     <div class="container"> 
         <div class="d-flex justify-content-around flex-wrap">
             <div *ngFor="let product of catalogo" class="card product-card mb-3">
-                <div>
+                <div data-aos="zoom-in">
                     <img class="fotoProducto" src="http://localhost:3000/merchan/{{product.image}}" alt="">
                     <p>{{product.product}}</p> 
                     <p>{{product.price}} €</p>
