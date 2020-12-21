@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
    // show or hide
    get isLogged():boolean {
-    return sessionStorage.getItem('rol')!=='Admin' && sessionStorage.getItem('rol')!=='User'
+    return sessionStorage.getItem('rol')!=='Admin' && sessionStorage.getItem('rol')!=='User';
   } 
 
 }
