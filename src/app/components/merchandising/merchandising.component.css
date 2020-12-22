@@ -19,6 +19,5 @@
 
 .product-card:hover {
    font-weight:bold;
-   width: 16rem;
-   height: 18rem;
+   transform: scale(1.02, 1.02);
 }

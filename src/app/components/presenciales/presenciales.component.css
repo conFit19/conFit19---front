@@ -9,5 +9,6 @@
     width: 18rem;
 }
 .ficha:hover{
-    width: 19rem;
+    font-weight:bold;
+    transform: scale(1.02, 1.02);
 }

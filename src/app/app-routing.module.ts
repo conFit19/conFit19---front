@@ -7,7 +7,6 @@ import { MerchandisingComponent } from './components/merchandising/merchandising
 import { OnlineComponent } from './components/online/online.component';
 import { PresencialesComponent } from './components/presenciales/presenciales.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
-import {NavbarComponent} from './components/navbar/navbar.component';
 import { NeweventComponent } from './components/newevent/newevent.component';
 import {ContactUsComponent} from './components/contact-us/contact-us.component'
 import { OrganizatorAreaComponent } from './components/organizator-area/organizator-area.component';

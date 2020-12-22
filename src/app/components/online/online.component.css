@@ -4,3 +4,11 @@
     min-height: 100vh;
     background-size: cover;
 }
+
+.ficha {
+    width: 18rem;
+}
+.ficha:hover{
+    font-weight:bold;
+    transform: scale(1.02, 1.02);
+}
