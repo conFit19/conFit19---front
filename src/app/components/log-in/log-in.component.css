@@ -16,3 +16,7 @@
 .esconder {
     display: hidden;
 }
+
+.registrate {
+    color: var(--white);
+}
